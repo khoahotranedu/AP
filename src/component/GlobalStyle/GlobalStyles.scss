@@ -1,0 +1,74 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: rgb(254, 44, 85);
+    --tux-colorprimary-tint-8: rgba(234, 40, 78, 1);
+    --tux-colorPrimary: rgba(254, 44, 85, 1);
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #0f4c75;
+    --boder--color: #dbdbdb;
+    --header-height: 120px;
+    --header__navbar-height: 40px;
+    --header-body-height: calc(var(--header-height) - var(--header__navbar-height));
+    --width-colum-2: 16.66666667%;
+    --favourite-color: rgb(238, 77, 45);
+}
+
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-rendering: optimizeSpeed;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-growth-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fade-growth-out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+        display: block;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes modal-growth {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

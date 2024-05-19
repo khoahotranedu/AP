@@ -1,0 +1,290 @@
+.body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    position: relative;
+    top: 90px;
+    padding: 1%;
+}
+.header {
+    display: flex;
+    position: relative;
+    .title {
+        color: red;
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .sum-button {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+    }
+    .button-left {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        align-items: center;
+        margin: 0px 15px;
+    }
+    .button-left > * {
+        margin: 3px;
+    }
+    .button-third {
+        width: 110px;
+        height: 40px;
+        background-color: #2ba0c7;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .button-third:hover {
+        background-color: #044cc8;
+        color: white;
+    }
+    .button-right {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .button-second {
+        width: 140px;
+        height: 40px;
+        background-color: white;
+        color: rgb(99, 94, 94);
+        border: 1px solid rgb(168, 160, 160);
+        border-radius: 5px;
+        text-align: left;
+        font-size: 16px;
+        padding-left: 30px;
+    }
+}
+.calender-number {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    border: 1px solid #ccc;
+
+    .day {
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        & + .day {
+            border-left: 1px solid #ccc;
+        }
+    }
+}
+.calender {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    grid-auto-rows: minmax(160px, auto);
+    border-top: transparent;
+    border-left: 1px solid #ccc;
+
+    .calender-item {
+        padding: 10px 5px 10px 10px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        transition: top line;
+        &:hover {
+            top: -4px;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        & + .calender-item {
+            border-right: 1px solid #ccc;
+        }
+        &:first-child {
+            border-right: 1px solid #ccc;
+        }
+    }
+}
+.wrap {
+    margin: 5px 0px;
+
+    .calender-item-title {
+        color: #ff008b;
+        font-size: 18px;
+        height: 20px;
+        line-height: 20px;
+        padding-left: 20px;
+        width: 190px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+    .calender-item-time {
+        font-size: 15px;
+        margin: 5px;
+        padding-left: 40px;
+    }
+    .calender-item-class {
+        font-size: 15px;
+        margin: 5px;
+        padding-left: 40px;
+    }
+    .calender-item-vv {
+        font-size: 15px;
+        margin: 0px;
+        margin-left: 40%;
+        font-weight: 600;
+        letter-spacing: 5px;
+        color: #ff008b;
+    }
+}
+.calender-item-day {
+    font-weight: 600;
+    font-size: 18px;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal-content {
+        min-height: 180px;
+        width: 400px;
+        background-color: white;
+        border: 2px solid #044cc8;
+        border-radius: 10px;
+        position: relative;
+        padding: 10px 35px;
+        z-index: 100;
+    }
+    .modal-content-header {
+        height: 35px;
+        padding-left: 47%;
+        font-weight: 600;
+    }
+    .wrap-modal {
+        display: flex;
+        height: 25px;
+        .calender-item-title {
+            color: #ff008b;
+            font-size: 18px;
+        }
+        .calender-item-time {
+            font-size: 15px;
+            margin-left: 5px;
+        }
+        .calender-item-class {
+            font-size: 15px;
+            margin-left: 5px;
+        }
+    }
+    .modal-content-icon {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        height: 15px;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            color: red;
+        }
+    }
+}
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+
+    .control-btn-next {
+        height: 30px;
+        width: 120px;
+
+        /* padding: 0px 0px; */
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        color: #347acc;
+        cursor: pointer;
+
+        &:hover {
+            margin-right: 20px;
+            color: rgb(250 18 18);
+        }
+    }
+    .control-btn-prev {
+        height: 30px;
+        width: 120px;
+        /* padding: 0px 0px; */
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        color: #347acc;
+        cursor: pointer;
+
+        &:hover {
+            margin-left: 20px;
+            color: rgb(250 18 18);
+        }
+    }
+    .icon-month {
+        margin: 0px 5px;
+    }
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2ba0c7;
+    font-size: 25px;
+    font-family: math;
+}
+.active {
+    background-color: #ccc;
+}
+.loadding {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+.loadding-icon {
+    font-size: 40px;
+    margin-top: 20%;
+}
+.iconload {
+    animation: load 1000ms linear infinite;
+}
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

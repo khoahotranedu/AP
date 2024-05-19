@@ -1,0 +1,11 @@
+export const Set_Birthday = 'set-birthday';
+export const Set_Born = 'set-born';
+export const Set_Email = 'set-email';
+export const Set_Phone = 'set-phone';
+export const Set_Address = 'set-address';
+export const Set_NameParent1 = 'set-nameParent1';
+export const Set_PhoneParent1 = 'set-phoneParent1';
+export const Set_NameParent2 = 'set-nameParent2';
+export const Set_PhoneParent2 = 'set-phoneParent2';
+export const Set_SocialNetwork = 'set-socialNetwork';
+export const Set_Gender = 'set-gender';

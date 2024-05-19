@@ -1,0 +1,68 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.breadcrum {
+    background-color: #e8e8e8;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    width: 96.5vw;
+    margin: 20px 1% 0 1%;
+    margin-left: 25px;
+}
+.btn_bread {
+    background-color: #e8e8e8;
+    color: black;
+    padding: 0px 10px 0px 5px;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 30px;
+    user-select: none;
+    &:hover {
+        border: solid 1px #333;
+    }
+
+    &.active {
+        background-color: white;
+        border-top-right-radius: 10px;
+        border: solid 1px #33333340;
+        border-bottom: transparent;
+    }
+}
+
+.icon-close {
+    font-size: 1.3rem;
+    height: 13px;
+    width: 10px;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    background-color: transparent;
+    display: flex;
+    &:hover {
+        color: red;
+    }
+}
+.loadding {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+.loadding-icon {
+    font-size: 40px;
+    margin-top: 20%;
+}
+.iconload {
+    animation: load 700ms linear infinite;
+}
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

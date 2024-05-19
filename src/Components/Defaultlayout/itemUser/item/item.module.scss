@@ -1,0 +1,43 @@
+.wrapper {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0px;
+    background-color: white !important;
+    height: 33px;
+    justify-content: center;
+    padding-left: 15%;
+    .icon {
+        font-size: 1.5rem;
+        margin-right: 5px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .content {
+        flex: 1;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        align-items: center;
+    }
+
+    & + .wrapper {
+        margin-left: 0px !important;
+    }
+    &:hover {
+        background-color: #cccccc23 !important;
+    }
+}
+.link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

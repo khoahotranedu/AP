@@ -1,0 +1,60 @@
+.header {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+    border-bottom: solid 2px #2f303342;
+    border-left: solid 2px #2f303342;
+    border-right: solid 2px #2f303342;
+    &.active {
+        background-color: #044cc8;
+        color: white;
+    }
+}
+.MH_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    & + .MH_item {
+        border-left: solid 2px #2f303342;
+    }
+}
+
+.Ma_MH {
+    display: flex;
+    justify-content: center;
+
+    flex: 1;
+}
+.Ten_MH {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+.Nhom_MH {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.TinChi_MH {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.Diem_MH {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+.DiemCK_MH {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.DiemTk_MH {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}

@@ -1,0 +1,188 @@
+.header {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 1px solid #2f303342;
+    cursor: default;
+    user-select: none;
+}
+.body-item {
+    height: 80px;
+    background-color: white;
+
+    position: relative;
+}
+.body-item:hover {
+    background-color: #9c999929;
+}
+.body-item + .body-item {
+    border-top: 1px solid #2f303342;
+}
+.name {
+    display: flex;
+    font-size: 1.6rem;
+    height: 25px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 10px;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    color: black;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -o-text-overflow: ellipsis;
+}
+.viewer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 2px 5px;
+    font-size: 1.2rem;
+}
+.viewer-see {
+    color: #044cc8;
+    font-size: 1.2rem;
+}
+.viewer-time {
+    color: rgba(0, 0, 0, 0.532);
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 12px;
+}
+.viewer-see:hover {
+    color: #333;
+}
+.search {
+    width: 80%;
+    height: 35px;
+    background-color: rgba(204, 204, 204, 0.3294117647);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: solid 2px transparent;
+    display: flex;
+    .search__input {
+        width: 75%;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        height: 25px;
+        font-size: 1.6rem;
+        padding: 5px 0px 5px 5px;
+    }
+    .search__input:not(:placeholder-shown) ~ .search__icon {
+        color: #878787;
+        cursor: default;
+    }
+    .search__clear {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        margin: 0px 5px;
+        color: #9f9f9f;
+        margin-right: 10px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .search__icon {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        flex: 1 1;
+        height: 35px;
+        position: relative;
+        color: rgba(22, 24, 35, 0.9);
+
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-left: 2px solid #979393;
+            height: 25px;
+            top: 50%;
+            left: -2px;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            background-color: rgb(133 126 126 / 12%);
+        }
+    }
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+.box_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    user-select: none;
+    cursor: default;
+    border-bottom: 1px solid #2f303342;
+}
+.mess_body {
+    overflow-y: auto;
+    max-height: 480px;
+}
+.body {
+    display: flex;
+    font-size: 1.4rem;
+    padding: 0px 5px;
+    height: 40px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    color: #5b5b5b;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.img {
+    height: 22px;
+    width: 22px;
+    background-color: transparent;
+}
+.header-name {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.message {
+    position: relative;
+}
+.clear {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    width: 17px;
+    height: 17px;
+    background-color: #ccc;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 3px;
+    &:hover {
+        color: red;
+    }
+}

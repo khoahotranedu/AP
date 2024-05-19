@@ -1,0 +1,207 @@
+.wraper {
+    height: 61px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 1%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    -webkit-user-select: none;
+    user-select: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #cccccc9e;
+}
+.inner {
+    width: 98%;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 1%;
+}
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    margin-right: 10px;
+    margin-left: 15px;
+    .narbar__list-item-img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.control {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    position: relative;
+
+    .narbar__link-control--course,
+    .narbar__link-control--info,
+    .narbar__link-control--home {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+
+        padding: 0px 10px;
+        height: 60px;
+        line-height: 60px;
+        transition: background-color 0.5s ease;
+        &:hover {
+            background-color: #3282b8;
+        }
+    }
+    .narbar__link-control--home {
+        padding: 0px 24px;
+    }
+    .page_Home,
+    .page_Private,
+    .page_Course {
+        background-color: #3282b8;
+        cursor: default;
+        user-select: none;
+        &:hover {
+            background-color: #3282b8;
+        }
+    }
+}
+.active {
+    display: flex;
+    align-items: center;
+
+    .notify,
+    .mess {
+        position: relative;
+        font-size: 1.8rem;
+        color: white;
+        margin: 0px 5px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    .notify {
+        cursor: default;
+    }
+    .number-notify {
+        background-color: red;
+        position: absolute;
+        border-radius: 50%;
+        top: 0px;
+        right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        cursor: pointer;
+        &.mall {
+            height: 17px;
+            width: 17px;
+        }
+        &.large {
+            width: 20px;
+            height: 20px;
+            top: -6px;
+            right: -6px;
+        }
+    }
+    .box-notify {
+        width: 350px;
+        height: 490px;
+        background-color: white;
+        position: absolute;
+        top: 55px;
+        border: solid 2px #33333329;
+        border-top: transparent;
+        border-radius: 2px;
+        right: -12px;
+        color: #ccc;
+        animation: fade-growth-in 0.3s ease-in;
+        transform-origin: 97% -2%;
+    }
+
+    .box-mess {
+        width: 350px;
+        background-color: white;
+        margin-top: 11px;
+        border-top: transparent;
+        border-radius: 2px;
+        margin-left: 6px;
+        color: #ccc;
+        animation: mess-Out 0.6s ease-in;
+        position: fixed;
+        z-index: 10;
+        top: 48px;
+        right: 0px;
+
+        border: solid 2px rgba(51, 51, 51, 0.1607843137);
+    }
+
+    .avatar {
+        margin-left: 5px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+.display__none {
+    display: none !important;
+}
+.iconbell {
+    width: 15px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.table-user {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    top: 61px;
+    right: 0px;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+
+    overflow: hidden;
+    .item-user {
+        height: 35px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}
+@keyframes mess-Out {
+    0% {
+        transform: translateX(100%);
+    }
+    60% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes fade-growth-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,65 @@
+.point__body {
+    position: relative;
+    margin-top: 20px;
+    border: solid 2px #2f303342;
+    height: 530px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+.block__semester {
+    margin-top: 10px;
+    width: 100%;
+    width: 87%;
+    margin: 0px 6.5%;
+}
+.semester__header {
+    margin-top: 20px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.time-Upload {
+    color: black;
+    padding-top: 10px;
+}
+.semester__footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    padding: 12px 0px 12px 25px;
+    margin-top: 25px;
+    font-size: 1.7rem;
+    /* bottom: 11%; */
+    background: #ddd;
+    height: 140px;
+    .semester__footer--item + .semester__footer--item {
+        margin-top: 10px;
+    }
+    .semester__footer--item {
+        color: red;
+    }
+}
+.loadding {
+    width: 97vw;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+.loadding-icon {
+    font-size: 40px;
+    margin-top: 14%;
+}
+.iconload {
+    animation: load 800ms linear infinite;
+}
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

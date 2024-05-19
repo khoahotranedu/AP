@@ -1,0 +1,23 @@
+.grid_btn {
+    background-color: #dce1e0;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 2px;
+    & + .grid_btn {
+        margin-left: 20px;
+    }
+}
+
+.grid_btn:hover {
+    background-color: #0388b4;
+    color: white;
+}
+
+.active {
+    background-color: #0388b4;
+    color: white;
+}

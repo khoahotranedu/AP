@@ -1,0 +1,128 @@
+.modul {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding-top: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-position: top center;
+}
+.login {
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.209803922);
+    border: solid 2px rgba(47, 48, 51, 0.2588235294);
+    box-shadow: -1px 3px 10px 5px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 51%;
+    left: 64%;
+    transform: translateY(-50%);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+}
+.login__body-list {
+    list-style: none;
+    margin-top: 20px;
+}
+.login__header {
+    height: 120px;
+}
+.login__header-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    user-select: none;
+}
+.login__title {
+    height: 60px;
+    font-size: 3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    color: #fefded;
+    user-select: none;
+}
+.login__body-list-item {
+    display: flex;
+    margin-bottom: 20px;
+    height: 30px;
+    align-items: center;
+    border-bottom: 3px solid #5bbcff;
+    width: 70%;
+    margin-left: 80px;
+}
+.login__input {
+    background-color: transparent !important;
+    color: #ffe3ca;
+    border: none;
+    outline: none;
+    position: relative;
+    width: 90%;
+    padding: 0px 8px;
+    font-size: 1.8rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffe3ca;
+}
+.icon__login {
+    font-size: 1.7rem;
+    opacity: 0.9;
+    color: #ffe3ca;
+    margin-bottom: 3px;
+}
+.login__footer {
+    text-decoration: none;
+    position: relative;
+    width: 200px;
+    height: 37px;
+    font-size: 2.2rem;
+    background-color: #2ba0c3;
+
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    top: 40px;
+    left: 123px;
+    color: white;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.login__footer:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.err_message {
+    color: #e72929;
+    text-align: center;
+    font-size: 23px;
+    position: absolute;
+    bottom: 130px;
+    left: 100px;
+    font-weight: 500;
+    font-family: auto;
+}
+.display__none {
+    display: none !important;
+}
+.title {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}

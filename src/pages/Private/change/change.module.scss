@@ -1,0 +1,108 @@
+.change-info {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 98%;
+    margin: 0px 1% 0% 1%;
+    overflow-x: hidden;
+    position: relative;
+}
+.change-info__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: center;
+    background-color: #044cc8;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+}
+.change-info__input {
+    width: 40%;
+    height: 30px;
+}
+.change-info__body {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    border: solid 2px #2f303342;
+    height: 530px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+.change-info__me {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.change-info__family {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.change-info__me-block {
+    display: flex;
+    flex-direction: column;
+}
+.change-info__me-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #044cc8;
+}
+.change-info__label {
+    width: 100%;
+    height: 30px;
+    font-weight: 500;
+    margin: 0px 10%;
+    display: flex;
+    align-items: center;
+}
+.change-info__input {
+    width: 80%;
+    height: 32px;
+    margin: 0px 10%;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.207);
+    padding: 5px;
+}
+.change-info__btn {
+    /* margin-top: 50px; */
+    height: 30px;
+    /* width: 100px; */
+    /* padding: 10px; */
+    background-color: rgba(4, 76, 200, 0.7882352941);
+    border-radius: 5px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin-left: 43.5%;
+    position: absolute;
+    bottom: 25%;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 6px 16px;
+}
+.change-info__btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.change-info__decoration {
+    background-color: white;
+    color: #ff9000;
+    width: 191px;
+    font-size: 16px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 5px;
+    position: absolute;
+    top: 14px;
+    left: 30px;
+    font-family: 'Roboto';
+}

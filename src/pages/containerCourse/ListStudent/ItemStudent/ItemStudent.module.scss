@@ -1,0 +1,63 @@
+.td,
+.th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    height: 32px;
+    position: relative;
+    padding-left: 10px;
+}
+.suadiem {
+    padding: 0px 0px 0px 5px !important;
+}
+.notcopy {
+    user-select: none;
+}
+.chinhsua {
+    text-align: center;
+    padding-right: 20px;
+}
+.sua {
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        color: red;
+    }
+    & + .sua {
+        margin-top: 15px;
+    }
+}
+.boxsua {
+    padding-left: 0px !important;
+}
+.save {
+    display: flex !important;
+}
+.itembox {
+    display: flex;
+    align-items: baseline;
+    height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.51);
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.iteminput {
+    outline: none;
+    border: none;
+    height: 25px;
+    flex: 1;
+    padding-left: 5px;
+    font-size: 15px;
+    background-color: transparent;
+}
+.inputlabel {
+    height: 30px;
+    width: 45px;
+    padding: 5px 10px;
+    font-size: 15px;
+}

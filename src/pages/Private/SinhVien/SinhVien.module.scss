@@ -1,0 +1,153 @@
+.list_student {
+    position: relative;
+    top: 80px;
+    left: 260px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+.table {
+    width: 1000px;
+}
+.table_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(85, 182, 223);
+}
+.table_header p {
+    color: white;
+    font-size: 30px;
+}
+button {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+}
+.add_student {
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(38, 105, 198);
+}
+.add_student:hover {
+    background-color: rgb(0, 0, 217);
+}
+.table_header input {
+    width: 300px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid rgb(85, 182, 223);
+    border-radius: 6px;
+    color: rgb(85, 182, 223);
+}
+.table_header ::placeholder {
+    color: rgb(85, 182, 223);
+}
+/* add */
+.add_info_student {
+    position: relative;
+    top: 10px;
+}
+.add_info_student input {
+    width: 220px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid rgb(214, 214, 214);
+    text-align: left;
+    border-radius: 10px;
+}
+.add_info_student ::placeholder {
+    color: rgb(135, 135, 135);
+}
+.add_info_student label {
+    color: rgb(124, 203, 237);
+    margin-right: 10px;
+}
+.add_info_student button {
+    color: white;
+    background-color: #2caddc;
+    margin-left: 20px;
+}
+.add_info_student button:hover {
+    background-color: #227ed3;
+}
+/* list */
+.table_section {
+    height: 500px;
+    margin-top: 20px;
+}
+table {
+    width: 1000px;
+    table-layout: auto;
+    position: sticky;
+    top: 20px;
+    border-collapse: collapse;
+}
+table th {
+    background-color: #f6f8f9;
+    color: #77b1f7;
+    font-size: 15px;
+}
+th,
+td {
+    border: 1px solid #a5a5a5;
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(87, 80, 80);
+}
+tr:hover td {
+    color: #2caddc;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+
+.stt {
+    width: 100px;
+}
+.mssv {
+    width: 150px;
+}
+.name {
+    width: 360px;
+}
+.faculty {
+    width: 250px;
+}
+.delete {
+    width: 100px;
+}
+/* delete */
+table button {
+    color: red;
+    background-color: #e1e1e1;
+}
+table button:hover {
+    background-color: #bab9b9;
+}
+.form-add-sv {
+    display: flex;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    & + .form-group {
+        margin-left: 15px;
+    }
+}
+.sua {
+    color: black;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    &:hover {
+        font-size: 15px;
+
+        color: red;
+        background-color: transparent;
+    }
+}
