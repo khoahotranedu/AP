@@ -15,13 +15,12 @@ import { getStorage } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-s
 import App from '~/App';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyDVOS3lgpZ4gKS_XVuvhPJKZ1eqKxPuQVA',
-    authDomain: 'login-bkel.firebaseapp.com',
-    databaseURL: 'https://login-bkel-default-rtdb.firebaseio.com',
-    projectId: 'login-bkel',
-    storageBucket: 'login-bkel.appspot.com',
-    messagingSenderId: '343764821189',
-    appId: '1:343764821189:web:0ad1c5fda89b7366a1fcac',
+    apiKey: "AIzaSyCraJtOXkitjV4HXKH9ntGGI9q-UEv4Y4k",
+    authDomain: "def-elearning.firebaseapp.com",
+    projectId: "def-elearning",
+    storageBucket: "def-elearning.appspot.com",
+    messagingSenderId: "1090322590908",
+    appId: "1:1090322590908:web:1914f2492fc6598cfb74b9"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -19,7 +19,7 @@ function Header({ Active = true, Private = false, Course = false }) {
     const dbRef = ref(database);
 
     let standardizeEmail = sessionStorage.getItem('standardizeEmail');
-    if (window.location.href === 'https://login-bkel.web.app/calender') {
+    if (window.location.href === 'https://def-elearning.web.app/calender') {
         if (name.page_Home || name.page_Private || name.page_Course) {
             setName({
                 page_Home: false,
@@ -28,7 +28,7 @@ function Header({ Active = true, Private = false, Course = false }) {
             });
         }
     }
-    if (window.location.href === 'https://login-bkel.web.app/Home') {
+    if (window.location.href === 'https://def-elearning.web.app/Home') {
         if (name.page_Private || name.page_Course) {
             setName({
                 page_Home: true,
@@ -37,7 +37,7 @@ function Header({ Active = true, Private = false, Course = false }) {
             });
         }
     }
-    if (window.location.href === 'https://login-bkel.web.app/course/addcourse') {
+    if (window.location.href === 'https://def-elearning.web.app/course/addcourse') {
         if (name.page_Home || name.page_Private || name.page_Course) {
             setName({
                 page_Home: false,
@@ -46,7 +46,7 @@ function Header({ Active = true, Private = false, Course = false }) {
             });
         }
     }
-    if (window.location.href === 'https://login-bkel.web.app/course/addcourse/list') {
+    if (window.location.href === 'https://def-elearning.web.app/course/addcourse/list') {
         if (name.page_Home || name.page_Private || name.page_Course) {
             setName({
                 page_Home: false,
@@ -56,7 +56,7 @@ function Header({ Active = true, Private = false, Course = false }) {
         }
     }
 
-    if (window.location.href === 'https://login-bkel.web.app/course/content') {
+    if (window.location.href === 'https://def-elearning.web.app/course/content') {
         if (name.page_Home || name.page_Private || name.page_Course) {
             setName({
                 page_Home: false,
@@ -65,7 +65,7 @@ function Header({ Active = true, Private = false, Course = false }) {
             });
         }
     }
-    if (window.location.href === 'https://login-bkel.web.app/private') {
+    if (window.location.href === 'https://def-elearning.web.app/private') {
         if (!name.page_Private) {
             setName({
                 page_Home: false,
@@ -74,7 +74,7 @@ function Header({ Active = true, Private = false, Course = false }) {
             });
         }
     }
-    if (window.location.href === 'https://login-bkel.web.app/course') {
+    if (window.location.href === 'https://def-elearning.web.app/course') {
         if (!name.page_Course) {
             setName({
                 page_Home: false,

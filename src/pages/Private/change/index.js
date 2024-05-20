@@ -20,6 +20,7 @@ function Change(onsave) {
     let phoneParent1ref = useRef();
     let nameParent2ref = useRef();
     let phoneParent2ref = useRef();
+    let nameCard = todos.nameCard;
 
     let handleSave = (e) => {
         e.preventDefault();
@@ -185,7 +186,7 @@ function Change(onsave) {
                         />
                     </div>
                     <div className={cx('change-info__me-block')}>
-                        <span className={cx('change-info__label')}>Nơi ở hiện tại của sinh viên </span>
+                        <span className={cx('change-info__label')}>Nơi ở hiện tại của {nameCard} </span>
                         <input
                             ref={addressref}
                             type="text"
