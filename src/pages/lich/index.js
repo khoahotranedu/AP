@@ -134,7 +134,10 @@ function Calender() {
                         {calender[month].map((item, index) => {
                             // eslint-disable-next-line
                             let x = new Date();
+                            let date = new Date(2024, month, 1);
+                            let firstDay = date.getDay();
 
+                            let offset = (firstDay + 6) % 7;
                             return (
                                 // eslint-disable-next-line
                                 <Calender_item
@@ -142,7 +145,7 @@ function Calender() {
                                     date={item.day}
                                     content={item.content}
 
-                                    active={index === x.getDate() - 1 && month === x.getMonth()}
+                                    active={index === x.getDate() + offset - 1 && month === x.getMonth()}
                                 />
                             );
                         })}
