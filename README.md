@@ -69,24 +69,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Account
+## or can run through link:
 
-#### Student:
-
-a.nguyencse@defu.edu.vn 123456789
-
-#### Teacher:
-
-dinhthuyduyen@defu.edu.vn 123456789
-
-#### Admin:
-
-admin01@defu.edu.vn defu12345
-
-### Video
-
-https://youtu.be/_OO7u7LlIuM?si=x6FFsFkX1dr1wneR
-
-### Slides
-
-https://www.canva.com/design/DAGEoeU7fxY/jKFZaNOzBYQ5hjuGVFHIDg/edit
+https://def-elearning.web.app/
