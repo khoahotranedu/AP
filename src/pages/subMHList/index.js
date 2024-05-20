@@ -6,6 +6,7 @@ import Itemchoise from './itemsearch/itemchoise';
 import { useState, useEffect } from 'react';
 import { database, ref, child, get, set, onValue } from '~/pages/Login';
 import { UseStore } from '~/Store';
+
 const cx = classNames.bind(styles);
 function removeVietnameseTones(str) {
     str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a');
@@ -59,7 +60,10 @@ function SubMHList() {
     let sltin = listcoursecur.reduce((total, currentValue) => {
         return total + currentValue.credit;
     }, 0);
+    
     let standardizeEmail = sessionStorage.getItem('standardizeEmail');
+    let [getIdx] = useState(localStorage.getItem('getIdx'));
+    
     useEffect(() => {
         onValue(child(dbRef, `fullCourses`), (snapshot) => {
             if (snapshot.child('list').exists()) {
@@ -68,15 +72,16 @@ function SubMHList() {
             }
         });
         get(child(dbRef, `accounts/${standardizeEmail}/courses/register`)).then((snapshot) => {
-            if (snapshot.child('cur').exists()) {
-                setlistcoursecur(snapshot.child('cur').val());
+            if (snapshot.child(`cur/${getIdx}`).exists()) {
+                setlistcoursecur(snapshot.child(`cur/${getIdx}`).val());
             }
-            if (snapshot.child('will').exists()) {
-                setlistcoursewill(snapshot.child('will').val());
+            if (snapshot.child(`will/${getIdx}`).exists()) {
+                setlistcoursewill(snapshot.child(`will/${getIdx}`).val());
             }
         });
         // eslint-disable-next-line
     }, []);
+
     return (
         <>
             {show && (
@@ -138,7 +143,7 @@ function SubMHList() {
                                                 setaddclass(!addclass);
                                             }}
                                         ></button>
-                                        <span style={{ display: 'block', marginLeft: '12px' }} onClick={() => {}}>
+                                        <span style={{ display: 'block', marginLeft: '12px' }} onClick={() => { }}>
                                             Thêm khóa học
                                         </span>
                                     </div>
@@ -281,17 +286,17 @@ function SubMHList() {
                                                     document.getElementById('addClass__content--codeClass').value
                                                         .length > 0 &&
                                                     document.getElementById('addClass__content--credit').value.length >
-                                                        0 &&
+                                                    0 &&
                                                     document.getElementById('addClass__content--maxStudents').value
                                                         .length > 0 &&
                                                     document.getElementById('addClass__content--teacher').value.length >
-                                                        0 &&
+                                                    0 &&
                                                     document.getElementById('addClass__content--timeDay').value.length >
-                                                        0 &&
+                                                    0 &&
                                                     document.getElementById('addClass__content--timeStart').value
                                                         .length > 0 &&
                                                     document.getElementById('addClass__content--timeEnd').value.length >
-                                                        0 &&
+                                                    0 &&
                                                     document.getElementById('addClass__content--week').value.length > 0
                                                 ) {
                                                     if (
@@ -333,19 +338,16 @@ function SubMHList() {
                                                                 start: document.getElementById(
                                                                     'addClass__content--timeStart',
                                                                 ).value,
-                                                                string: `Thứ ${
-                                                                    document.getElementById(
-                                                                        'addClass__content--timeDay',
-                                                                    ).value
-                                                                }: ${
-                                                                    document.getElementById(
+                                                                string: `Thứ ${document.getElementById(
+                                                                    'addClass__content--timeDay',
+                                                                ).value
+                                                                    }: ${document.getElementById(
                                                                         'addClass__content--timeStart',
                                                                     ).value
-                                                                } - ${
-                                                                    document.getElementById(
+                                                                    } - ${document.getElementById(
                                                                         'addClass__content--timeEnd',
                                                                     ).value
-                                                                }`,
+                                                                    }`,
                                                             },
                                                         };
 
@@ -430,11 +432,11 @@ function SubMHList() {
                                                                 (listcoursecur[i].schedule.start >=
                                                                     newCourse.schedule.start &&
                                                                     listcoursecur[i].schedule.start <
-                                                                        newCourse.schedule.end) ||
+                                                                    newCourse.schedule.end) ||
                                                                 (listcoursecur[i].schedule.end >
                                                                     newCourse.schedule.start &&
                                                                     listcoursecur[i].schedule.end <=
-                                                                        newCourse.schedule.end)
+                                                                    newCourse.schedule.end)
                                                             ) {
                                                                 conditionalCourse = false;
                                                                 alert('Trùng giờ học đã đăng ký');
@@ -457,11 +459,11 @@ function SubMHList() {
                                                                 (listcoursewill[i].schedule.start >=
                                                                     newCourse.schedule.start &&
                                                                     listcoursewill[i].schedule.start <
-                                                                        newCourse.schedule.end) ||
+                                                                    newCourse.schedule.end) ||
                                                                 (listcoursewill[i].schedule.end >
                                                                     newCourse.schedule.start &&
                                                                     listcoursewill[i].schedule.end <=
-                                                                        newCourse.schedule.end)
+                                                                    newCourse.schedule.end)
                                                             ) {
                                                                 conditionalCourse = false;
                                                                 alert('Trùng giờ học đang đăng ký');
@@ -481,7 +483,7 @@ function SubMHList() {
                                                         set(
                                                             child(
                                                                 dbRef,
-                                                                `accounts/${standardizeEmail}/courses/register/will`,
+                                                                `accounts/${standardizeEmail}/courses/register/will/${getIdx}`,
                                                             ),
                                                             [...listcoursewill, newCourse],
                                                         );
@@ -599,7 +601,7 @@ function SubMHList() {
                                                         get(
                                                             child(
                                                                 dbRef,
-                                                                `accounts/${standardizeEmail}/courses/register/cur`,
+                                                                `accounts/${standardizeEmail}/courses/register/cur/${getIdx}`,
                                                             ),
                                                         ).then((snapshot) => {
                                                             if (snapshot.exists()) {
@@ -608,7 +610,7 @@ function SubMHList() {
                                                                 set(
                                                                     child(
                                                                         dbRef,
-                                                                        `accounts/${standardizeEmail}/courses/register/cur`,
+                                                                        `accounts/${standardizeEmail}/courses/register/cur/${getIdx}`,
                                                                     ),
                                                                     currentList,
                                                                 );
@@ -669,7 +671,7 @@ function SubMHList() {
                                                         get(
                                                             child(
                                                                 dbRef,
-                                                                `accounts/${standardizeEmail}/courses/register/will`,
+                                                                `accounts/${standardizeEmail}/courses/register/will/${getIdx}`,
                                                             ),
                                                         ).then((snapshot) => {
                                                             if (snapshot.exists()) {
@@ -678,7 +680,7 @@ function SubMHList() {
                                                                 set(
                                                                     child(
                                                                         dbRef,
-                                                                        `accounts/${standardizeEmail}/courses/register/will`,
+                                                                        `accounts/${standardizeEmail}/courses/register/will/${getIdx}`,
                                                                     ),
                                                                     currentList,
                                                                 );
@@ -747,14 +749,14 @@ function SubMHList() {
                                                     set(
                                                         child(
                                                             dbRef,
-                                                            `accounts/${standardizeEmail}/courses/register/cur`,
+                                                            `accounts/${standardizeEmail}/courses/register/cur/${getIdx}`,
                                                         ),
                                                         [...listcoursecur, ...newarr],
                                                     );
                                                     set(
                                                         child(
                                                             dbRef,
-                                                            `accounts/${standardizeEmail}/courses/register/will`,
+                                                            `accounts/${standardizeEmail}/courses/register/will/${getIdx}`,
                                                         ),
                                                         [],
                                                     );

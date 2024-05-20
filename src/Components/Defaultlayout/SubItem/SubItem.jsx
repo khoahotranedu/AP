@@ -6,7 +6,7 @@ import { UseStore } from '~/Store';
 
 const cx = classNames.bind(styles);
 
-const SubItem = ({ title, starttime, starttime2, endtime, endtime2, ondelete, STT }) => {
+const SubItem = ({id, title, starttime, starttime2, endtime, endtime2, ondelete, STT }) => {
     let [state] = UseStore();
     let { todos } = state;
     let [type] = useState(todos.job);
@@ -55,7 +55,7 @@ const SubItem = ({ title, starttime, starttime2, endtime, endtime2, ondelete, ST
                     ) : registrationNotYetDue ? (
                         <div className={cx('not-due')}>Chưa tới hạn đăng ký</div>
                     ) : (
-                        <OnTime />
+                        <OnTime id={id}/>
                     )}
                 </li>
                 {type === 'admin' && (<li className={cx('delete')} onClick={ondelete}>

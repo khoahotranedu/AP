@@ -66,6 +66,7 @@ const SubMH = () => {
                 let newRegister = [];
                 for (let i = snapshot.size - 1; i >= 0; i--) {
                     newRegister.push({
+                        id: i,
                         title: snapshot.val()[i].title,
                         starttime: snapshot.val()[i].starttime,
                         starttime2: snapshot.val()[i].starttime2,
@@ -132,6 +133,7 @@ const SubMH = () => {
                 {subItems.map((item, index) => (
                     <SubItem
                         key={index}
+                        id={item.id}
                         title={item.title}
                         starttime={item.starttime}
                         starttime2={item.starttime2}
